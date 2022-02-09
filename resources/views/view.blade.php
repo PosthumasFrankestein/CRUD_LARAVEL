@@ -31,6 +31,6 @@
                     @endauth
                 </div>
             @endif
-
+            <h1>View</h1>
         </body>
 </html>
