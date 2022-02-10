@@ -14,7 +14,7 @@ class AddController extends Controller
      */
     public function index()
     {
-        return view('add');
+        return view('test');
     }
 
     /**
