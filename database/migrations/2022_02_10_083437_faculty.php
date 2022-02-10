@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Module extends Migration
+class Faculty extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class Module extends Migration
      */
     public function up()
     {
-        //create module database
-        Schema::create('module', function (Blueprint $table) {
-            $table->foreignId('id')->reference('id')->on('faculty')->onDelete('cascade');
-            $table->string('mname');
+        // create faculty database
+        Schema::create('faculty', function (Blueprint $table) {
+            $table->id()->index();
+            $table->string('fname');
         });
     }
 

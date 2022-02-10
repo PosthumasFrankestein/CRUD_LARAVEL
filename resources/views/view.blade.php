@@ -52,6 +52,9 @@
                             @endforeach
                             
                         </table>
+                        <div>
+                        {{$infos->links()}}
+                        </div>
                         @endif
                 </div>
             </div>

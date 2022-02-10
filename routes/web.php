@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\ViewController::class, 'index']);
 Route::resource('/add', App\Http\Controllers\AddController::class);
-// Route::get('getCustomer', [App\Http\Controllers\AddController::class, 'show']);
+Route::get('getCustomer', [App\Http\Controllers\AddController::class, 'show']);

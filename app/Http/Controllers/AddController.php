@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Info;
+use App\Models\faculty;
+use App\Models\module;
 
 class AddController extends Controller
 {
@@ -14,7 +16,8 @@ class AddController extends Controller
      */
     public function index()
     {
-        return view('test');
+        $infos = faculty::all();
+        return view('add')->with('infos',$infos);
     }
 
     /**
@@ -72,14 +75,13 @@ class AddController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //retrive data for module
-        // $infos = Info::paginate(2);
-        // error_log($infos);
-        error_log("here");
-        return view("view");
-
+        // retrive data for module
+        $data=module::select('mname')->where('id','=',$request->id)->get();
+        error_log($data);
+        return response()->json($data);
+         
     }
 
     /**
