@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Info extends Model
 {
-    use HasFactory;
+    //table name
+    protected $table='info';
+
+    //primary key
+    public $primaryKey='id';
+
+    public $timestamps = false;
+
+    // datas to fill
+    protected $fillable = [
+		'name','email','phone','address','dob','nationality','faculty','module','gender',
+	];
 }
