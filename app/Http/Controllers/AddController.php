@@ -72,10 +72,13 @@ class AddController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+    //     //retrive data for module
+    //     $infos = Info::paginate(2);
+    //     error_log($infos);
+
+    // }
 
     /**
      * Show the form for editing the specified resource.

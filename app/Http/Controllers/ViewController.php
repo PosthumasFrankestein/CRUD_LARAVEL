@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Info;
 
 class ViewController extends Controller
 {
@@ -13,7 +14,8 @@ class ViewController extends Controller
      */
     public function index()
     {
-        return view('view');
+        $infos = Info::paginate(8);
+        return view('view')->with('infos',$infos);
     }
 
     /**
