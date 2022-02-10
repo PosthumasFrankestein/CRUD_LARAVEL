@@ -1,4 +1,3 @@
-#main screen
 <img src"https://github.com/PosthumasFrankestein/CRUD_LARAVEL/blob/master/img/1_scrn.png">
 
 #view data
