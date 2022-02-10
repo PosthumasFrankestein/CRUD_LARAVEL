@@ -119,7 +119,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <select name="faculty" id="faculty" class="form-control input-lg dynamic" required>
+                                    <select name="faculty" id="faculty" class="form-control input-lg dynamic faculty" required>
                                         @foreach($infos as $i)
                                         <option value="{{$i->id}}">{{$i->fname}}</option>
                                         @endforeach
@@ -139,7 +139,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <select name="module" id="module" class="form-control input-lg dynamic" required>
+                                    <select name="module" id="module" class="form-control input-lg dynamic module" required>
                                         <option value="" selected="true" disabled="true">Select Module</option>
                                     </select>
                                 </div>
@@ -168,10 +168,8 @@
       </script>
 <script>
     $(document).ready(function() {
-        $(document).on('change', faculty, function() {
+        $(document).on('change', '.faculty', function() {
             var id = $(this).val();
-            var div = $(this).parent().parent();
-
             var op = ""
 
             $.ajax({
@@ -181,14 +179,12 @@
                     "id": id
                 }),
                 success: function(data) {
-                    console.log(data)
-                    // op += '<option value="" selected disabled>Choose Module</option>';
-                    // for (var i = 0; i < data.length; i++) {
-                    //     op += '<option value="' + data[i].id + '">' + data[i].mname + '</option>';
-                    // }
-                    // div.find(module).html('');
-                    // div.find(module).append(op);
-
+                    op += '<option value="" selected disabled>Choose Module</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        op += '<option value="' + data[i].id + '">' + data[i].mname + '</option>';
+                    }
+                    document.getElementById("module").innerHTML=op;
+                    
                 }
             });
 

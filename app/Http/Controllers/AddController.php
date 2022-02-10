@@ -79,7 +79,7 @@ class AddController extends Controller
     {
         // retrive data for module
         $data=module::select('mname')->where('id','=',$request->id)->get();
-        error_log($data);
+        error_log($request->id);
         return response()->json($data);
          
     }
