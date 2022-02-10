@@ -16,8 +16,9 @@ class AddController extends Controller
      */
     public function index()
     {
-        $infos = faculty::all();
-        return view('add')->with('infos',$infos);
+        // incase you want to show faculty dynamically
+        // $infos = faculty::all();
+        return view('add');
     }
 
     /**

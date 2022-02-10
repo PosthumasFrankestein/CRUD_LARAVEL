@@ -13,4 +13,9 @@ class faculty extends Model
     public $primaryKey='id';
 
     public $timestamps = false;
+
+    //faculty has many modules
+    public function modules(){
+        return $this->hasMany('App\Models\module');
+      }
 }

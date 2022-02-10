@@ -13,4 +13,9 @@ class module extends Model
     public $primaryKey=null;
 
     public $timestamps = false;
+
+    //every module has atleast one faculty
+    public function faculty(){
+        return $this->belongsTo('App\Models\faculty');
+    }
 }

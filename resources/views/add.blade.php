@@ -120,10 +120,12 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <select name="faculty" id="faculty" class="form-control input-lg dynamic faculty" required>
-                                        @foreach($infos as $i)
-                                        <option value="{{$i->id}}">{{$i->fname}}</option>
-                                        @endforeach
-                                    </select>
+                                        <option value="1">Science</option>
+                                        <option value="2">Literature</option>
+                                        <option value="3">Computer</option>
+                                        <option value="4">Drama</option>
+                                        <option value="5">Economics</option>
+                                        </select>
                                 </div>
 
                                 @error('faculty')

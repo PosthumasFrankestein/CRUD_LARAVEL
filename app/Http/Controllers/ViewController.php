@@ -14,7 +14,7 @@ class ViewController extends Controller
      */
     public function index()
     {
-        $infos = Info::paginate(1);
+        $infos = Info::paginate(8);
         return view('view')->with('infos',$infos);
     }
 
