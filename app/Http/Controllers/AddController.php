@@ -79,7 +79,6 @@ class AddController extends Controller
     {
         // retrive data for module
         $data=module::select('mname')->where('fname','=',$request->id)->get();
-        error_log($request->id);
         return response()->json($data);
          
     }
