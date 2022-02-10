@@ -120,12 +120,10 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <select name="faculty" id="faculty" class="form-control input-lg dynamic faculty" required>
-                                        <option value="1">Science</option>
-                                        <option value="2">Literature</option>
-                                        <option value="3">Computer</option>
-                                        <option value="4">Drama</option>
-                                        <option value="5">Economics</option>
-                                        </select>
+                                        @foreach($infos as $i)
+                                        <option value="{{$i->fname}}">{{$i->fname}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
 
                                 @error('faculty')
@@ -178,7 +176,7 @@
                 type: 'get',
                 url: '/getCustomer',
                 data: ({
-                    "id": id
+                    "id":id
                 }),
                 success: function(data) {
                     op += '<option value="" selected disabled>Choose Module</option>';

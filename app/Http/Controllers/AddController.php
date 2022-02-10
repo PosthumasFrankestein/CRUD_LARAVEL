@@ -16,9 +16,8 @@ class AddController extends Controller
      */
     public function index()
     {
-        // incase you want to show faculty dynamically
-        // $infos = faculty::all();
-        return view('add');
+        $infos = faculty::all();
+        return view('add')->with('infos',$infos);
     }
 
     /**
@@ -79,7 +78,7 @@ class AddController extends Controller
     public function show(Request $request)
     {
         // retrive data for module
-        $data=module::select('mname')->where('id','=',$request->id)->get();
+        $data=module::select('mname')->where('fname','=',$request->id)->get();
         error_log($request->id);
         return response()->json($data);
          
