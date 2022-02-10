@@ -181,7 +181,7 @@
                 success: function(data) {
                     op += '<option value="" selected disabled>Choose Module</option>';
                     for (var i = 0; i < data.length; i++) {
-                        op += '<option value="' + data[i].id + '">' + data[i].mname + '</option>';
+                        op += '<option value="' + data[i].mname + '">' + data[i].mname + '</option>';
                     }
                     document.getElementById("module").innerHTML=op;
                     

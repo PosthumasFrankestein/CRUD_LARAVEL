@@ -42,7 +42,7 @@ th,td {
                   op+='<option value="" selected disabled>Choose Module</option>';
                   for(var i=0;i<data.length;i++)
                   {
-                    op+='<option value="'+data[i].id+'">'+data[i].mname+'</option>';
+                    op+='<option value="'+data[i].mname+'">'+data[i].mname+'</option>';
                   }
                   div.find('.module').html('');
                   div.find('.module').append(op);
