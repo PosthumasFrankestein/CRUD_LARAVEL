@@ -23,7 +23,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "minimist": "^1.2.5",
+        "minimist": "^1.2.6",
         "vue-loader": "^17.0.0"
     }
 }
